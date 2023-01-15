@@ -1,15 +1,3 @@
-/*********************************************************************************
- *  WEB322 – Assignment 6
- *  I declare that this assignment is my own work in accordance with Seneca Academic Policy.
- *  No part of this assignment has been copied manually or electronically from any other source
- *  (including web sites) or distributed to other students.
- *
- *  Name: Nishit Shah Student ID: 130 176 217 Date: 2nd Dec 2022
- *
- *  Online (Cyclic) URL: https://lime-muddy-chicken.cyclic.app
- *
- ********************************************************************************/
-
 const express = require("express");
 const blogData = require("./blog-service");
 const authData = require("./auth-service.js");
@@ -26,9 +14,9 @@ const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
 
 cloudinary.config({
-  cloud_name: "dxvlwfmrc",
-  api_key: "928595832913832",
-  api_secret: "26z1hiYkHgHvKph2y8KSq9xo7aM",
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.CLOUD_API_KEY,
+  api_secret: process.env.CLOUD_API_SECRET,
   secure: true,
 });
 
