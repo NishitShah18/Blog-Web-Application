@@ -8,6 +8,8 @@ const exphbs = require("express-handlebars");
 const path = require("path");
 const stripJs = require("strip-js");
 const clientSessions = require("client-sessions");
+const env = require("dotenv")
+env.config()
 
 const app = express();
 
