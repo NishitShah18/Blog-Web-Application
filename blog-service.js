@@ -1,19 +1,14 @@
 const Sequelize = require("sequelize");
 
-var sequelize = new Sequelize(
-  "trvqmilm",
-  "trvqmilm",
-  "mynzjpG3bK64EHbfEM5jktTjnXTGwwDE",
-  {
-    host: "peanut.db.elephantsql.com",
-    dialect: "postgres",
-    port: 5432,
-    dialectOptions: {
-      ssl: { rejectUnauthorized: false },
-    },
-    query: { raw: true },
-  }
-);
+var sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+  host: process.env.DB_HOST,
+  dialect: 'postgres',
+  port: 5432,
+  dialectOptions: {
+      ssl: { rejectUnauthorized: false }
+  },
+  query: { raw: true }
+})
 
 var Post = sequelize.define("Post", {
   body: Sequelize.TEXT,
