@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
+const env = require("dotenv")
+env.config()
+
 var userSchema = new mongoose.Schema({
   userName: {
     type: String,
@@ -21,7 +24,7 @@ let User;
 module.exports.initialize = function () {
   return new Promise(function (resolve, reject) {
     let db = mongoose.createConnection(
-      "mongodb+srv://ngshah3:Ngs2511@web322-app.encqbrf.mongodb.net/?retryWrites=true&w=majority"
+      process.env.MONGO_URI_STRING
     );
 
     db.on("error", (err) => {
