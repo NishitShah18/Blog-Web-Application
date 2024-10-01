@@ -1,7 +1,5 @@
 # Blog-Web-Application
 
-## Link To Website : [https://blog-service-by-ns.cyclic.app](https://blog-service-by-ns.cyclic.app/blog)
-
 ## Requirements
 - Git (to clone this repo)
 - [NodeJS](https://nodejs.org/en/)
