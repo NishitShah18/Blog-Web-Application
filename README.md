@@ -1,9 +1,11 @@
-# Blog-Web-Application
+# A Blog-Service Web Application made with JavaScript(Express, Node.js, Handlebars), HTML & CSS
 
 ## Requirements
 - Git (to clone this repo)
 - [NodeJS](https://nodejs.org/en/)
 - [Cloudinary Account](https://cloudinary.com/)
+- Nodemon
+- ElephantSQL Account
 
 ## Local Development
 1. Clone this repo - `git clone https://github.com/NishitShah18/Blog-Web-Application.git`
